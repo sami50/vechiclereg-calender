@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="portableDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="brand">
+    <Key>
+      <PropertyRef Name="bid" />
+    </Key>
+    <Property Name="bid" Type="int" Nullable="false" />
+    <Property Name="bname" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="custom2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="vtype" Type="varchar" MaxLength="50" />
+    <Property Name="owner" Type="varchar" MaxLength="50" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="vechicle">
+    <Key>
+      <PropertyRef Name="vid" />
+    </Key>
+    <Property Name="vid" Type="int" Nullable="false" />
+    <Property Name="vtype" Type="varchar" MaxLength="150" />
+    <Property Name="vbrand" Type="varchar" MaxLength="150" />
+    <Property Name="vowner" Type="varchar" MaxLength="150" />
+    <Property Name="imagepath" Type="varchar(max)" />
+    <Property Name="date" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="portableDBModelStoreContainer">
+    <EntitySet Name="brand" EntityType="Self.brand" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="custom2" EntityType="Self.custom2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="vechicle" EntityType="Self.vechicle" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

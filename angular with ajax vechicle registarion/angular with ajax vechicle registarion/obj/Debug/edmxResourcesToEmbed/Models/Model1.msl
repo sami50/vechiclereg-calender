@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="portableDBModelStoreContainer" CdmEntityContainer="portableDBEntities">
+    <EntitySetMapping Name="brands">
+      <EntityTypeMapping TypeName="portableDBModel.brand">
+        <MappingFragment StoreEntitySet="brand">
+          <ScalarProperty Name="bid" ColumnName="bid" />
+          <ScalarProperty Name="bname" ColumnName="bname" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="custom2">
+      <EntityTypeMapping TypeName="portableDBModel.custom2">
+        <MappingFragment StoreEntitySet="custom2">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="vtype" ColumnName="vtype" />
+          <ScalarProperty Name="owner" ColumnName="owner" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vechicles">
+      <EntityTypeMapping TypeName="portableDBModel.vechicle">
+        <MappingFragment StoreEntitySet="vechicle">
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+          <ScalarProperty Name="vowner" ColumnName="vowner" />
+          <ScalarProperty Name="vbrand" ColumnName="vbrand" />
+          <ScalarProperty Name="vtype" ColumnName="vtype" />
+          <ScalarProperty Name="vid" ColumnName="vid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bookings">
+      <EntityTypeMapping TypeName="portableDBModel.booking">
+        <MappingFragment StoreEntitySet="booking">
+          <ScalarProperty Name="bkdate2" ColumnName="bkdate2" />
+          <ScalarProperty Name="bkdate1" ColumnName="bkdate1" />
+          <ScalarProperty Name="vid" ColumnName="vid" />
+          <ScalarProperty Name="bkid" ColumnName="bkid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="booking3">
+      <EntityTypeMapping TypeName="portableDBModel.booking3">
+        <MappingFragment StoreEntitySet="booking3">
+          <ScalarProperty Name="todate" ColumnName="todate" />
+          <ScalarProperty Name="fromdate" ColumnName="fromdate" />
+          <ScalarProperty Name="reservationid" ColumnName="reservationid" />
+          <ScalarProperty Name="vid" ColumnName="vid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vebookings">
+      <EntityTypeMapping TypeName="portableDBModel.vebooking">
+        <MappingFragment StoreEntitySet="vebooking">
+          <ScalarProperty Name="vmodel" ColumnName="vmodel" />
+          <ScalarProperty Name="vid" ColumnName="vid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

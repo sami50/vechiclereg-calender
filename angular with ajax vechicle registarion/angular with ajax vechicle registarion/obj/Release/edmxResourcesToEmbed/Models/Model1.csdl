@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="portableDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="brand">
+    <Key>
+      <PropertyRef Name="bid" />
+    </Key>
+    <Property Name="bid" Type="Int32" Nullable="false" />
+    <Property Name="bname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="custom2">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vtype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="owner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="portableDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="brands" EntityType="Self.brand" />
+    <EntitySet Name="custom2" EntityType="Self.custom2" />
+    <EntitySet Name="vechicles" EntityType="portableDBModel.vechicle" />
+  </EntityContainer>
+  <EntityType Name="vechicle">
+    <Key>
+      <PropertyRef Name="vid" />
+    </Key>
+    <Property Name="vid" Type="Int32" Nullable="false" />
+    <Property Name="vtype" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="vbrand" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="vowner" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="imagepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>

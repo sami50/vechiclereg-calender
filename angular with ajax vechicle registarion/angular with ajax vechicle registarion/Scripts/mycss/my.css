@@ -1,0 +1,14 @@
+﻿table.fade.ng-enter {
+  transition:0.5s linear all;
+  opacity:0;
+}
+table.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+table.fade.ng-leave {
+  transition:0.5s linear all;
+  opacity:1;
+}
+table.fade.ng-leave.ng-leave-active {
+  opacity:0;
+}

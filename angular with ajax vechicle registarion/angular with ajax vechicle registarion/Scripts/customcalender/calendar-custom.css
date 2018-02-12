@@ -1,0 +1,49 @@
+ /*Style form modal*/
+
+.ui-dialog .ui-dialog-titlebar-close:after {
+    content: "X";
+    color: #ffffff;
+    margin-top: 0px;
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 5px;
+}
+.ui-draggable .ui-dialog-titlebar {
+    cursor: move;
+    background: #008AC9;
+    color: white;
+    margin: -4px -4px 2px -3px;
+    border: 0;
+    border-radius:0;
+}
+.fc-event, .fc-event-dot {
+    background-color: #008AC9;
+}
+.fc-ltr .fc-timeline-event {
+    margin-top: 10px;
+}
+.ui-widget-overlay {
+    background: #000000!important;
+    opacity: 0.6!important;
+}
+a, a:hover, a:focus, a:active {
+    outline:0!important;
+}
+.ui-dialog .ui-dialog-titlebar-close {
+        border: 0px solid white;
+        border-radius: 2px;
+        background: transparent;
+}
+#errorInfo p {
+    font-size: 17px;
+    margin-top: 12px;
+}
+
+.fc-sat {
+    background-color:darkgray;
+}
+.fc-sun {
+   background-color:darkgray; 
+
+}

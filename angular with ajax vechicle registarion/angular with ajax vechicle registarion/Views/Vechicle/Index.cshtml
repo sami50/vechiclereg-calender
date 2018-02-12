@@ -1,0 +1,243 @@
+﻿@model IEnumerable<angular_with_ajax_vechicle_registarion.Models.vechicle>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+@*<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>*@
+
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+
+<link rel="stylesheet" type="text/css" href="~/Scripts/mycss/my.css" />
+<link rel="stylesheet" type="text/css" href="~/Scripts/mycss/animate.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+@* Full callender  *@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.min.css" />
+<link rel="stylesheet" type="text/css" href="https//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.2/fullcalendar.print.css" />
+
+<script src="~/Scripts/myscript/myscript.js"></script>
+<script src="~/Scripts/myscript/animate.js"></script>
+
+<div class="row">
+    <div class="col-md-2"> </div>
+        <div class="col-md-8">
+            <p>
+                <a href="#div01"> <i class="fa fa-car fa-5x"></i> Insert new Vechicle</a>
+            </p>
+        </div>
+    <div class="col-md-2"> </div>
+    </div>
+
+<div class="animated bounce">
+    <div ng-app="myapp" ng-controller="myctrl" ng-init="init()">
+
+
+        <input type="text" ng-model="sam" placeholder="&#xf062" class="form-control">
+        @*<input type="text" ng-model="autocomplete" ng-keyup="complete(autocomplete)" />
+        <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+            <li class="list-group-item" ng-repeat="dataa in filtercomplete" ng-click="filltextbox(dataa)">{{customlist}}</li>
+        </ul>*@
+        <table class="table table-striped table-hover" id="t01" >
+             <thead>
+                <tr>
+                    <th> ID</th>
+                    <th>TYPE <i class="fa fa-bus "></i></th>
+                    <th>BRAND</th>
+                    <th>OWNER </th>
+                    <th>Image</th>
+                    <th>Date</th>
+                    <th>Action <i class="fa fa-cog fa-spin fa-1x fa-fw"></i></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-if="vechicle"  id="tblr" ng-repeat="item in vechicle  | filter:sam" ng-click="go(item)" draggablem data="item" liitem="item" draggable="true" >
+                    <td >{{item.vid}}</td>
+                    <td>{{item.vtype}}</td>
+                    <td>{{item.vbrand}}</td>
+                    <td>{{item.vowner}}</td>
+                    <td><img src="{{item.imagepath}}" style="margin:10px " height="42" width="42" class="img-circle" /></td>
+                    <td>{{item.date | date:'yyyy-MM-dd'}}</td>
+                    <td>
+                        <form>
+                            <button type="button" ng-click="deletevechicle(item.vid)" class="btn btn-danger btn-sm" id="d01">
+                            <i class="fa fa-trash-o fa-1x"></i> DELETE</button>
+                            <input type="button" ng-click="editvechicle(item)" class="btn btn-warning btn-sm" value="UPDATE">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr style="border-color :blueviolet" />
+        <div class="row">
+            <div class="col-md-6">
+                <div id="div01" class="">
+                    <form name="input01" enctype="multipart/form-data" ng-submit="insertimg()">
+
+                        <div class="input-group margin-bottom-sm">
+                            <span class="input-group-addon"><i class="fa fa-id-card fa-fw"></i></span>
+                            <input type="number" ng-model="v_id" class="form-control" ng-disabled="isDisabledvid" placeholder="Vechicle ID" />
+                        </div>
+                        <br />
+                        <div class="input-group margin-bottom-sm">
+                            <span class="input-group-addon"><i class="fa  fa-bus fa-fw"></i></span>
+                            <input type="text" ng-model="v_type" class="form-control" placeholder="vechicle type" />
+                        </div>
+                        <br />
+
+                        <div class="input-group margin-bottom-sm">
+                            <span class="input-group-addon"><i class="fa fa-odnoklassniki fa-fw"></i></span>
+                            <select class="form-control" ng-model="v_brand" ng-options="x.bname as x.bname for x in brands">
+                                <option value="" selected>Please select one</option>
+                            </select>
+                        </div>
+                            <br />
+
+                          <div class="input-group margin-bottom-sm">
+                            <span class="input-group-addon"><i class="fa fa-pencil fa-fw" aria-hidden="true"></i></span>
+                             <input type="text" ng-model="v_owner" class="form-control" placeholder="Vechicle owner" />
+                           </div>
+                            <br />
+                            @* image upload *@
+
+                            @*<input id="inputImage" type="file" accept="image/*" image="image" file-model="customer.file" />*@
+                            <img ng-show="image" ng-src="{{image.url}}" type="{{image.file.type}}" />
+
+                            @*<input type="file" name="file" class="file-input-wrapper btn btn-default btn-primary" file-model="uploadFile" id="control" />
+            {{uploadFile2}}*@
+
+                            <input type="file" name="file" class="file-input-wrapper btn btn-default btn-primary" ng-model="image1" id="control" onchange="angular.element(this).scope().uploadedFile(this)" />
+                            <img id="output" style="width:200px;height:200px;" class="img-responsive" />
+                            <br />
+                            <br />
+
+                            <input type="date" data-provide="datepicker" class="form-control" id="date01" />
+
+                            <br />
+                            <input type="button" value="test" onclick="customfun1()" />
+                            <div test-model="testsn">
+                                {{uploadFile2}}
+                            </div>
+
+
+
+                            @*<input type="button" class="btn btn-success" id="img01" value="img upload">*@
+
+                            <input type="submit" class="btn btn-success" ng-click="addvechicle()" ng-disabled="isDisabledadd" id="sub01">
+                            <input type="button" class="btn btn-primary" ng-click="editvechicle2()" value="UPDATE" ng-disabled="isDisabledupdate" />
+</form>
+
+                    <br>
+                </div>
+                <div class="input-group margin-bottom-sm">
+                    <span class="input-group-addon"><i class="fa fa-search-plus fa-fw" aria-hidden="true"></i></span>
+                    <input type="text" class="form-control" ng-keyup="keyfun($event,inputmy)" ng-model="inputmy" id="input1" placeholder="search owners name" />
+                </div>
+
+
+                <ul class="list-group">
+                    <li class="list-group" ng-repeat="data in generateresult">{{data}}</li>
+                </ul>
+
+                @*<script>
+
+
+                    dTable = $('#t01').DataTable({
+                        "ajax": {
+                            "url": "/vechicle/getallvechicle",
+                            "type": "GET",
+                            "datatype": "json"
+
+                        },
+                        "columns": [
+                                { "data": 'vid' },
+                                { "data": "vbrand" },
+                                { "data": "vtype" },
+                                { "data": "vowner" },
+
+                                {
+                                    "data": "vid", "render":
+                                      function (data) {
+                                          return "<a class ='btn btn-default btn-sm' onclick=alert(" + data + ")><i class='fa fa-pencil'></i>Edit</a><a class ='btn btn-danger btn-sm' style='margin-left : 30px' style='margin-right : 30px' onclick=deletevechicle(" + data + ")><i class='fa fa fa-trash'></i>Delete</a>"
+                                      },
+                                    "orderable": false,
+                                    "searchable": false,
+                                    "width": "150px"
+                                    }
+                        ],
+
+                        "language": {
+                            "emptyTable": "No Data Found , Please Click On <b> Add New </b>Button"
+                        }
+
+                    });
+
+                    $('#t01 > tbody').on('click', 'tr', function () {
+                        var data = dTable.row(this).data();
+                        alert('You clicked on ' + data.vowner + '\'s row');
+                    });
+
+                    setInterval(function () {
+                        dTable.ajax.reload();
+                    }, 3000);
+
+                </script>*@
+                <div id="dragandrop">
+
+                </div>
+
+                @*<script>
+                    $(function () {
+                        $('#dragandrop').filedrop({
+                            url: '@Url.Action('UploadFiles')',
+                            allowedfiletypes: ['image/jpeg', 'image/png', 'image/gif'],
+                     allowedfileextensions:
+                        })
+                    })
+                </script>*@
+
+            </div>
+            <div class="col-md-6">
+                <div   style="border-color:azure" droppable drop="handleDrop"><p>asa</p> </div>
+                <p>this is second half</p>
+                {{dragername}}
+                {{dragerid}}
+                {{testdrag}}
+            </div>
+        </div>
+
+        <a href="@Url.Action("ExportReport", new { id = "PDF" })"> Get Report in PDF</a><br />
+
+        <select class="form-control" ng-model="v_brand_report" ng-options="x.bname as x.bname for x in brands" id="catlistid">
+            @*ViewBag.reportcategory*@
+            <option value="" selected>Please select one</option>
+            @Html.Hidden("SelectedCompany", "sample")
+        </select>
+
+        <a href="@Url.Action("categoriseReport", "vechicle")?id={{catlistid}}&category={{v_brand_report}}" class="btn btn-danger"> Get categorize Report </a>
+        @*<a class="btn btn-default" ng-click="categoryreport()">Get Caetegorise PDF Report</a>*@
+
+        @* end of angular controller  *@
+
+        
+
+    </div>
+</div>
+
+
+
+<script src="~/Scripts/myscript/imageupload.js"></script>
+<script src="~/Scripts/myscript/custom.js"></script>
+
+
+<script>
+    $('#calendar').fullCalendar({
+        defaultView: 'agendaDay',
+        events: [
+            // events go here
+        ],
+        resources: [
+            { id: 'a', title: 'Room A' },
+            { id: 'b', title: 'Room B' },
+            { id: 'c', title: 'Room C' },
+            { id: 'd', title: 'Room D' }
+        ]
+    });
+</script>

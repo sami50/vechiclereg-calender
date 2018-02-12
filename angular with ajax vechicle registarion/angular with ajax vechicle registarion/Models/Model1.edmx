@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="portableDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="booking">
+          <Key>
+            <PropertyRef Name="bkid" />
+          </Key>
+          <Property Name="bkid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vid" Type="int" Nullable="false" />
+          <Property Name="bkdate1" Type="varchar" MaxLength="50" />
+          <Property Name="bkdate2" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="booking3">
+          <Key>
+            <PropertyRef Name="vid" />
+          </Key>
+          <Property Name="vid" Type="int" Nullable="false" />
+          <Property Name="reservationid" Type="int" />
+          <Property Name="fromdate" Type="varchar" MaxLength="50" />
+          <Property Name="todate" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="brand">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="int" Nullable="false" />
+          <Property Name="bname" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="custom2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="vtype" Type="varchar" MaxLength="50" />
+          <Property Name="owner" Type="varchar" MaxLength="50" />
+          <Property Name="date" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="vebooking">
+          <Key>
+            <PropertyRef Name="vid" />
+          </Key>
+          <Property Name="vid" Type="int" Nullable="false" />
+          <Property Name="vmodel" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="vechicle">
+          <Key>
+            <PropertyRef Name="vid" />
+          </Key>
+          <Property Name="vid" Type="int" Nullable="false" />
+          <Property Name="vtype" Type="varchar" MaxLength="150" />
+          <Property Name="vbrand" Type="varchar" MaxLength="150" />
+          <Property Name="vowner" Type="varchar" MaxLength="150" />
+          <Property Name="imagepath" Type="varchar(max)" />
+          <Property Name="date" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="portableDBModelStoreContainer">
+          <EntitySet Name="booking" EntityType="Self.booking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="booking3" EntityType="Self.booking3" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="brand" EntityType="Self.brand" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="custom2" EntityType="Self.custom2" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vebooking" EntityType="Self.vebooking" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="vechicle" EntityType="Self.vechicle" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="portableDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="brand">
+          <Key>
+            <PropertyRef Name="bid" />
+          </Key>
+          <Property Name="bid" Type="Int32" Nullable="false" />
+          <Property Name="bname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="custom2">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vtype" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="owner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="portableDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="brands" EntityType="Self.brand" />
+          <EntitySet Name="custom2" EntityType="Self.custom2" />
+          <EntitySet Name="vechicles" EntityType="portableDBModel.vechicle" />
+          <EntitySet Name="bookings" EntityType="portableDBModel.booking" />
+          <EntitySet Name="booking3" EntityType="portableDBModel.booking3" />
+          <EntitySet Name="vebookings" EntityType="portableDBModel.vebooking" />
+        </EntityContainer>
+        <EntityType Name="vechicle">
+          <Key>
+            <PropertyRef Name="vid" />
+          </Key>
+          <Property Name="vid" Type="Int32" Nullable="false" />
+          <Property Name="vtype" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="vbrand" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="vowner" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="imagepath" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="date" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="booking">
+          <Key>
+            <PropertyRef Name="bkid" />
+          </Key>
+          <Property Name="bkid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="vid" Type="Int32" Nullable="false" />
+          <Property Name="bkdate1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="bkdate2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="booking3">
+          <Key>
+            <PropertyRef Name="vid" />
+          </Key>
+          <Property Name="vid" Type="Int32" Nullable="false" />
+          <Property Name="reservationid" Type="Int32" />
+          <Property Name="fromdate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="todate" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="vebooking">
+          <Key>
+            <PropertyRef Name="vid" />
+          </Key>
+          <Property Name="vid" Type="Int32" Nullable="false" />
+          <Property Name="vmodel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="portableDBModelStoreContainer" CdmEntityContainer="portableDBEntities">
+          <EntitySetMapping Name="brands">
+            <EntityTypeMapping TypeName="portableDBModel.brand">
+              <MappingFragment StoreEntitySet="brand">
+                <ScalarProperty Name="bid" ColumnName="bid" />
+                <ScalarProperty Name="bname" ColumnName="bname" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="custom2">
+            <EntityTypeMapping TypeName="portableDBModel.custom2">
+              <MappingFragment StoreEntitySet="custom2">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="vtype" ColumnName="vtype" />
+                <ScalarProperty Name="owner" ColumnName="owner" />
+                <ScalarProperty Name="date" ColumnName="date" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vechicles">
+            <EntityTypeMapping TypeName="portableDBModel.vechicle">
+              <MappingFragment StoreEntitySet="vechicle">
+                <ScalarProperty Name="date" ColumnName="date" />
+                <ScalarProperty Name="imagepath" ColumnName="imagepath" />
+                <ScalarProperty Name="vowner" ColumnName="vowner" />
+                <ScalarProperty Name="vbrand" ColumnName="vbrand" />
+                <ScalarProperty Name="vtype" ColumnName="vtype" />
+                <ScalarProperty Name="vid" ColumnName="vid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bookings">
+            <EntityTypeMapping TypeName="portableDBModel.booking">
+              <MappingFragment StoreEntitySet="booking">
+                <ScalarProperty Name="bkdate2" ColumnName="bkdate2" />
+                <ScalarProperty Name="bkdate1" ColumnName="bkdate1" />
+                <ScalarProperty Name="vid" ColumnName="vid" />
+                <ScalarProperty Name="bkid" ColumnName="bkid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="booking3">
+            <EntityTypeMapping TypeName="portableDBModel.booking3">
+              <MappingFragment StoreEntitySet="booking3">
+                <ScalarProperty Name="todate" ColumnName="todate" />
+                <ScalarProperty Name="fromdate" ColumnName="fromdate" />
+                <ScalarProperty Name="reservationid" ColumnName="reservationid" />
+                <ScalarProperty Name="vid" ColumnName="vid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="vebookings">
+            <EntityTypeMapping TypeName="portableDBModel.vebooking">
+              <MappingFragment StoreEntitySet="vebooking">
+                <ScalarProperty Name="vmodel" ColumnName="vmodel" />
+                <ScalarProperty Name="vid" ColumnName="vid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

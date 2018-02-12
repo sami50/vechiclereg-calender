@@ -1,0 +1,67 @@
+﻿[{
+    "vechicleid":1,
+    "modal":"Toyota",
+    "reservation": 
+      [
+          { 
+          "reservationid":"1",
+          "fromdate":"2018-02-10" ,
+          "todate":"2018-02-15"
+          },
+          { 
+          "reservationid":"2",
+          "fromdate":"2018-02-16" ,
+          "todate":"2018-02-18"
+          },
+          { 
+          "reservationid":"3",
+          "fromdate":"2018-02-20" ,
+          "todate":"2018-02-24"
+          }
+      ]
+  
+},
+
+  {
+    "vechicleid": 2,
+    "modal": "Toyota",
+    "reservation": [
+      {
+        "reservationid": "4",
+        "fromdate": "2018-02-01",
+        "todate": "2018-02-03"
+      },
+      {
+        "reservationid": "5",
+        "fromdate": "2018-02-05",
+        "todate": "2018-02-18"
+      },
+      {
+        "reservationid": "6",
+        "fromdate": "2018-02-20",
+        "todate": "2018-02-27"
+      }
+    ]
+  },
+    {
+    "vechicleid": 3,
+    "modal": "Ford",
+    "reservation": [
+      {
+        "reservationid": "7",
+        "fromdate": "2018-02-12",
+        "todate": "2018-02-15"
+      },
+      {
+        "reservationid": "8",
+        "fromdate": "2018-02-19",
+        "todate": "2018-02-20"
+      },
+      {
+        "reservationid": "9",
+        "fromdate": "2018-02-21",
+        "todate": "2018-02-27"
+      }
+    ]
+  }
+ ]

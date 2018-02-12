@@ -1,0 +1,180 @@
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\ApplicationInsights.config
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\csc.exe
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\System.Collections.Immutable.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\System.Reflection.Metadata.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\vbc.exe
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\VBCSCompiler.exe
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\VBCSCompiler.exe.config
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\angular with ajax vechicle registarion.dll.config
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\angular with ajax vechicle registarion.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\angular with ajax vechicle registarion.pdb
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Antlr3.Runtime.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.SqlServer.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.Agent.Intercept.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.DependencyCollector.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.Web.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.WindowsServer.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ApplicationInsights.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Core.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Cookies.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Facebook.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Google.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.OAuth.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Twitter.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Web.Infrastructure.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Newtonsoft.Json.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Owin.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Helpers.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Mvc.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Optimization.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Razor.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Deployment.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Razor.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\WebGrease.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.DependencyCollector.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.Web.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.WindowsServer.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ApplicationInsights.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Helpers.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Mvc.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Optimization.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Razor.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Deployment.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Razor.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Antlr3.Runtime.pdb
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Newtonsoft.Json.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.SqlServer.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Core.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Facebook.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Cookies.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.OAuth.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Google.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Twitter.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\obj\Release\angular with ajax vechicle registarion.csprojResolveAssemblyReference.cache
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\obj\Release\angular with ajax vechicle registarion.dll
+E:\home made\angular with ajax vechicle registarion\angular with ajax vechicle registarion\obj\Release\angular with ajax vechicle registarion.pdb
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\ApplicationInsights.config
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\csc.exe
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\System.Collections.Immutable.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\System.Reflection.Metadata.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\vbc.exe
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\VBCSCompiler.exe
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\roslyn\VBCSCompiler.exe.config
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\angular with ajax vechicle registarion.dll.config
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\angular with ajax vechicle registarion.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\angular with ajax vechicle registarion.pdb
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Antlr3.Runtime.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.SqlServer.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.Agent.Intercept.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.DependencyCollector.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.PerfCounterCollector.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.ServerTelemetryChannel.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.Web.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.WindowsServer.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ApplicationInsights.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Core.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Cookies.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Facebook.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Google.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.OAuth.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Twitter.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ReportViewer.Common.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ReportViewer.WebForms.DLL
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Web.Infrastructure.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Newtonsoft.Json.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Owin.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Helpers.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Mvc.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Optimization.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Razor.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Deployment.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Razor.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\WebGrease.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\stdole.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.DependencyCollector.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.ServerTelemetryChannel.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.Web.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AI.WindowsServer.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.ApplicationInsights.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Helpers.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Mvc.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Optimization.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.Razor.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Deployment.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\System.Web.WebPages.Razor.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Antlr3.Runtime.pdb
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Newtonsoft.Json.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\EntityFramework.SqlServer.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Core.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Facebook.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Cookies.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.OAuth.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Google.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.Twitter.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\obj\Release\angular with ajax vechicle registarion.csprojResolveAssemblyReference.cache
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\obj\Release\angular with ajax vechicle registarion.dll
+D:\home made - Copy - Copy\angular with ajax vechicle registarion\angular with ajax vechicle registarion\obj\Release\angular with ajax vechicle registarion.pdb

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<angular_with_ajax_vechicle_registarion.Models.vechicle>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-animate.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="~/Scripts/myscript/myscript.js"></script>
+<script src="~/Scripts/myscript/animate.js"></script>
+<link rel="stylesheet" type="text/css" href="~/Scripts/mycss/my.css" />
+<link rel="stylesheet" type="text/css" href="~/Scripts/mycss/animate.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Vechicle Type</th>
+        <th>
+            vechicle brand
+        </th>
+        <th>owner name</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.vtype)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vbrand)
+        </td>
+        <td>@Html.DisplayFor(modelItem => item.vowner)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vid }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vid }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vid })
+        </td>
+    </tr>
+}
+
+</table>
+<div class="animated bounce">
+    <div ng-app="myapp" ng-controller="myctrl" ng-init="init()">
+
+
+        <input type="text" ng-model="sam" placeholder="&#xf062" class="form-control">
+        <input type="text" ng-model="autocomplete" ng-keyup="complete(autocomplete)" />
+        <ul class="list-group" ng-model="hidethis" ng-hide="hidethis">
+            <li class="list-group-item" ng-repeat="dataa in filtercomplete" ng-click="filltextbox(dataa)">{{customlist}}</li>
+        </ul>
+
+        <i class="fa fa-search-plus" aria-hidden="true"></i>
+        <table class="table" id="t01" ng-view>
+
+            <thead>
+                <tr>
+                    <th> ID</th>
+                    <th>TYPE</th>
+                    <th>BRAND</th>
+                    <th>OWNER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in vechicle | filter:sam">
+                    <td>{{item.vid}}</td>
+                    <td>{{item.vtype}}</td>
+                    <td>{{item.vbrand}}</td>
+                    <td>{{item.vowner}}</td>
+                    <td>
+                        <form>
+
+                            <input type="button" ng-click="deletevechicle(item.vid)" class="btn btn-danger delete" value="DELETE" id="d01">
+                            <input type="button" ng-click="editvechicle(item)" class="btn btn-default" value="UPDATE">
+                        </form>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <hr style="border-color :blueviolet" />
+        <div id="div01">
+            <form name="input01">
+                <label>Vechicle ID</label>
+                <input type="number" ng-model="v_id" class="form-control" ng-disabled="isDisabledvid" required/>
+                <label>Vechicle Type</label>
+                <input type="text" ng-model="v_type" class="form-control" required/>
+                <label>Vechicle Brand</label>
+                <select class="form-control" ng-model="v_brand" ng-options="x.bname as x.bname for x in brands" required>
+                    <option value="">Please select one</option>
+                </select>
+                <label>Vechicle owner</label>
+                <input type="text" ng-model="v_owner" class="form-control"  required/>
+
+                <input type="submit" class="btn btn-success" ng-click="addvechicle()" ng-disabled="isDisabledadd" id="sub01"  >
+                <input type="button" class="btn btn-info" ng-click="editvechicle2()" value="UPDATE" ng-disabled="isDisabledupdate" />
+            </form>
+            <p> this is the selected one </p>{{v_brand}}
+
+            <input type="text" ng-model="sample" />
+        </div>
+
+        <input type="button" value="click" ng-class="mylist()" class="btn btn-success" />
+        <input type="button" value="click" class="btn btn-success" id="b01" />
+
+
+    </div>
+</div>

@@ -1,0 +1,307 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>calender</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/angular")
+    <link href="~/scripts/fcalender/lib/fullcalendar.min.css" rel="stylesheet" />
+    <link href="~/Scripts/fcalender/scheduler.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Scripts/customcalender/calendar-custom.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
+    <script src="~/Scripts/fcalender/lib/moment.min.js"></script>
+    <script src="~/Scripts/fcalender/lib/fullcalendar.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/myscript/myscript.js"></script>
+    <script src="~/Scripts/fcalender/scheduler.min.js"></script>
+   @* <script src='https://fullcalendar.io/js/home-scheduler.js?3.8.2-1.9.2'></script>*@
+    <script src="~/Scripts/customcalender/customcalender.js"></script>
+</head>
+<body ng-app="myapp" ng-controller="myctrl" ng-init="init()">
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    @*<div ng-app="myapp" ng-controller="myctrl" ng-init="init()">
+        <input type="text" ng-model="calm" />
+        <p>{{calm}}</p>
+    </div>*@
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="calendar" name="calendar">
+                </div>
+            </div>
+            <div class="col-md-6">
+                @*<div id='external-events'>
+                    <h4>Draggable Events</h4>
+                    @*<div ng-repeat="item in vechicle" draggable ="true" id="dg">
+                            <p class='fc-event' draggable ="true">My Event 1 {{item.vid}}</p>
+                        </div>*@
+                    @*<div class='fc-event'>item1</div>
+                    <div class='fc-event'>item2</div>
+                    <div class='fc-event'>item3</div>
+                    <p>
+                        <input type='checkbox' id='drop-remove' />
+                        <label for='drop-remove'>remove after drop</label>
+                    </p>*@
+
+                </div>
+            </div>
+        </div>
+        <div id="mymodal" class="modal fade" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"><span id="eventID"></span></h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Modal body text goes here.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    @*Start time End time modal*@
+    <div id="eventContent" title="Event Details" style="display:none;">
+        <b>Start:</b> <span id="startTime"></span><br>
+        <b>End:</b> <span id="endTime"></span><br><br>
+        <p id="eventInfo"></p>
+        <p><strong><a id="eventLink" href="" target="_blank">Read More</a></strong></p>
+    </div>
+
+    @*Error message modal*@
+    <div id="errorMessage" style="display:none;">
+        <div id="errorInfo"></div>
+    </div>
+    
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        //$.each(people.persons, function (index, value) {
+        //    var newItem = "<tr><td>" + value.name + "</td></tr>"
+        //    inHTML += newItem;
+        //});
+
+        //$("table#dynamicTable").html(inHTML);
+        
+        $('#external-events .fc-event').bind('click', function () {
+            alert('User clicked on "foo."');
+        });
+
+          $('#external-events .fc-event').each(function () {   
+            // store data so the calendar knows to render an event upon drop
+            $(this).data('event', {
+                title: $.trim($(this).text()), // use the element's text as the event title
+                stick: true // maintain when user navigates (see docs on the renderEvent method)
+            });
+
+            // make the event draggable using jQuery UI
+            $(this).draggable({
+                zIndex: 999,
+                revert: true,      // will cause the event to go back to its
+                revertDuration: 0  //  original position after the drag
+            });
+
+        });
+
+        // page is now ready, initialize the calendar...
+        //first function
+          var event2 = [];
+          var resource2 = [];
+          fetchandrendercalender();
+          var events = [];
+          var resource = [];
+        function fetchandrendercalender() {
+            events = []
+            resource = []
+            //get events to calender from booking table
+            $.ajax({
+                type: "GET",
+                url: "/vechicle/getcalevents",
+                success: function (data) {
+                    $.each(data, function (i, v) {
+                        events.push({
+                            id: v.bkid,
+                            resourceId: v.vid,
+                            start: v.bkdate1,
+                            end: v.bkdate2
+                        })//end of each
+                    })
+                    //get vechicle to calender from vechicle table
+                    $.ajax({
+                        type: "GET",
+                        url: "/vechicle/getvechicletocal",
+                        success: function (data) {
+                            $.each(data, function (i, v) {
+                                resource.push({
+                                    id: v.vid,
+                                    title: v.vid,
+                                    field: v.vmodel
+                             })//end of each
+                            });
+                        //call generate calender
+                            generatecalender();
+                        }
+                    })
+
+                    //end of get vechicle to calender from vechicle table
+                 },
+                error: function (error) {
+                    alert("error in generating calender")
+                }
+            })
+
+         
+            //get data from jsonfile
+            event2 = [];
+            resource2 = [];
+
+            //var readjson = $.getJSON("/Scripts/fcalender/demos/json/custom.json", function (data) {
+            //    console.log("success" + data);
+            //})
+            //   .success(function (data) {
+            //       console.log("second success" + data);
+            //       $.each(data, function (key, v) {
+            //           alert("vechicle id = " + v.vechicleid + " " + v.reservation.length);
+            //           //check count
+
+            //           resource2.push({
+            //               id: v.vechicleid,
+            //               title: v.vechicleid
+            //           })
+            //           for (var i = 0; i < v.reservation.length; i++) {
+
+            //               event2.push({
+            //                   id: v.reservation[i].reservationid,
+            //                   resourceId: v.vechicleid,
+            //                   start: v.reservation[i].fromdate,
+            //                   end: v.reservation[i].todate
+            //               })
+                         
+            //           }
+            //       })
+            //   })
+            //   .fail(function () {
+            //       alert("error");
+            //   });
+
+ }
+
+        function update(event) {
+            
+            var e2 = {
+                bkid: event.id,
+                vid: event.resourceId,
+                bkdate1: event.start.format(),
+                bkdate2: event.end.format()
+            }
+            $.ajax({
+                type: 'POST',
+                url: "/vechicle/saveEvent",
+                data: e2,
+                dataType: "json",
+                success: function (data) {
+                    alert('succesfully updated')
+                    fetchandrendercalender();
+                },
+                error: function (error) {
+                    alert("error in generating calender")
+                }
+            })
+        }
+
+    function generatecalender(){
+   
+        
+        $('#calendar').fullCalendar({
+
+            now: '2018-02-07',
+            editable: false, // enable draggable events
+            aspectRatio: 1.8,
+            scrollTime: '00:00', // undo default 6am scrollTime
+            header: {
+                left: 'prev,next',
+                center: 'title',
+                right: 'timelineFourDays'
+            },
+            buttonText: {
+                timelineFourDays: "View"
+            },
+            defaultView: 'timelineFourDays',
+            views: {
+                timelineFourDays: {
+                    type: 'timeline',
+                    duration: { days: 31 }
+                }
+            },
+            eventStartEditable: true,
+            eventDurationEditable: true,
+            //resourceLabelText: 'Cars',
+            resourceColumns: [
+        {
+            labelText: 'ID',
+            field: 'title'
+        },
+        {
+            labelText: 'Model',
+            field: 'field'
+        }
+            ],
+            resources: resource,
+         
+            events: events,
+           
+            eventDrop: function (event, delta, revertFunc, jsEvent, ui, view) {
+                //alert('event start at ' + event.start + '  event end  at ' + event.end);
+                $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+                $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+                $("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
+            },
+            eventClick: function (event, jsEvent, view) {
+
+                //if (event.end !== null) {
+                //    alert('event start at ' + event.start + '  event end  at ' + event.end);
+                //}
+                //else {
+                //    alert('evemt start ' + event.start + ' event end');
+                //}
+                $("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
+            },
+            eventResize: function (event, jsEvent, ui, view,date) {
+                alert(date)
+                //update(event);
+                //$("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+                //$("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+                //$("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
+                //alert("sucessfully updated")
+            },
+            eventOverlap: function (stillEvent, movingEvent) {
+                //alert("already booked on these days");
+                var str = '<p class="text-center">Already booked on these days</p>'
+                $("#errorInfo").html(str);
+                $("#errorMessage").dialog({ modal: true, title: "Error", width: 450, height: 100 });
+            },
+            dayClick: function (date, jsEvent, view) {
+                alert(date )
+            }
+
+        })
+ }
+    });
+</script>
