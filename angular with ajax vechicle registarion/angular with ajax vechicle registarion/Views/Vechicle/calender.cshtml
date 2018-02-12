@@ -36,11 +36,20 @@
     </div>*@
     <div class="container">
         <div class="row">
-            <div class="col-md-6">
+            <div class="form-group">
+                <label class="col-md-4 control-label">from - Date</label>
+               <div class="col-md-4"> 
+                    <input id="todate" name="todate" type="text" placeholder="" class="form-control input-md"> 
+               </div>
+             </div>
+            <input type="button" class="btn btn-default" value="Save Event" onclick=""/>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
                 <div id="calendar" name="calendar">
                 </div>
-            </div>
-            <div class="col-md-6">
+           
                 @*<div id='external-events'>
                     <h4>Draggable Events</h4>
                     @*<div ng-repeat="item in vechicle" draggable ="true" id="dg">
@@ -54,7 +63,7 @@
                         <label for='drop-remove'>remove after drop</label>
                     </p>*@
 
-                </div>
+               
             </div>
         </div>
         <div id="mymodal" class="modal fade" role="dialog">
@@ -88,7 +97,10 @@
     <div id="errorMessage" style="display:none;">
         <div id="errorInfo"></div>
     </div>
-    
+    @*Edit Bookings modal*@
+    <div id="edit-booking-form" style="display:none;">
+        <div id="edit-booking-body"></div>
+    </div>
 </body>
 </html>
 <script type="text/javascript">
@@ -236,12 +248,15 @@
             aspectRatio: 1.8,
             scrollTime: '00:00', // undo default 6am scrollTime
             header: {
-                left: 'prev,next',
+                right: 'prev, today, next',
                 center: 'title',
-                right: 'timelineFourDays'
+                left: 'timelineFourDays'
             },
             buttonText: {
-                timelineFourDays: "View"
+                timelineFourDays: "View",
+                prev: "Previous Month",
+                next: "Next Month",
+                today: "Current"
             },
             defaultView: 'timelineFourDays',
             views: {
@@ -250,6 +265,7 @@
                     duration: { days: 31 }
                 }
             },
+            selectable:true,
             eventStartEditable: true,
             eventDurationEditable: true,
             //resourceLabelText: 'Cars',
@@ -261,6 +277,10 @@
         {
             labelText: 'Model',
             field: 'field'
+        },
+        {
+            labelText: 'TEST',
+           
         }
             ],
             resources: resource,
@@ -273,7 +293,7 @@
                 $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
                 $("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
             },
-            eventClick: function (event, jsEvent, view) {
+            eventClick: function (event, jsEvent, view, callback) {
 
                 //if (event.end !== null) {
                 //    alert('event start at ' + event.start + '  event end  at ' + event.end);
@@ -281,9 +301,48 @@
                 //else {
                 //    alert('evemt start ' + event.start + ' event end');
                 //}
-                $("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
+                //$("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
+                var str = '<form class="form-horizontal">' +
+                  '<fieldset>' +
+                  '<legend>Booking Details</legend>' +
+                  '<div class="form-group">' +
+                  '<label class="col-md-4 control-label" for="name">Vechicle ID</label>' +
+                  '<div class="col-md-4">' +
+                  '<input id="name" name="name" type="text" placeholder="" class="form-control input-md" required="">' +
+                  '</div>' +  
+                  '</div>' +/*t1*/
+                  ' <div class="form-group">' +
+                  '<label class="col-md-4 control-label" for="emailaddress">Vechicle model</label>' +
+                  '<div class="col-md-4">' +
+                  '<input id="vmodel" name="vmodel" type="text" placeholder="" class="form-control input-md">' +
+                  '</div>' +
+                  ' </div>' +/*t2*/
+                  '<div class="form-group">' +
+                  '<label class="col-md-4 control-label" for="dateselection">from - Date</label>' +
+                  '<div class="col-md-4">' +
+                  '<input id="fromdate" name="fromdate" type="text" placeholder="" class="form-control input-md">' +
+                  '</div>' +
+                  '</div>' +/*from date*/
+                  '<div class="form-group">' +
+                  '<label class="col-md-4 control-label" for="dateselection">from - Date</label>' +
+                  '<div class="col-md-4">' +
+                  '<input id="todate2" name="todate2" type="text" placeholder="" class="form-control input-md">' +
+                  '</div>' +
+                  '</div>' +/*to date*/
+                  '</fieldset>' +
+                  '</form>';
+                $("#edit-booking-body").html(str);
+                $("#edit-booking-form").dialog({ modal: true, title: "Booking Details", width: 550 });
+                
+                
+                $("#name").val(event.resourceId);
+                $("#vmodel").val(event.eventData);
+                $("#fromdate").val(event.start._i);
+                $("#todate2").val(event.end._i);
+                
             },
-            eventResize: function (event, jsEvent, ui, view,date) {
+           
+                eventResize: function (event, jsEvent, ui, view,date) {
                 alert(date)
                 //update(event);
                 //$("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
@@ -297,11 +356,30 @@
                 $("#errorInfo").html(str);
                 $("#errorMessage").dialog({ modal: true, title: "Error", width: 450, height: 100 });
             },
-            dayClick: function (date, jsEvent, view) {
-                alert(date )
+            //dayClick: function (date, jsEvent, view) {
+            //    var moment = $('#calendar').fullCalendar('getDate');
+            //    alert("The current date of the calendar is " + date.format() + 'Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+                
+            //},
+            eventRender: function (event, element,view) {
+                //element.click(function () {
+                //    $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
+                //    $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+                //    $("#eventContent").dialog({ modal: true, title: "Vehicle Name Here", width: 450 });
+                //});
+                element.on('dblclick', function (event, element) {
+                    //alert("already booked on these days");
+                  
+                });
+
+            },
+            select:function( start, end, event){
+                alert("event star  " +start.format() +"events end " + end.format())
             }
 
         })
+
+      
  }
     });
 </script>
